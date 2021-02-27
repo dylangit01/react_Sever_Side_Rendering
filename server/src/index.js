@@ -1,11 +1,9 @@
 import express from 'express'
 import React from 'react'
-import {renderToString} from 'react-dom/server.js'
-import Home from './client/components/Home.js'
-const app = express();
+import {renderToString} from 'react-dom/server'
+import Home from './client/components/Home'
 
-app.use(express.json())
-app.use(express.urlencoded())
+const app = express();
 
 const PORT = process.env.PORT || 5000
 

@@ -8,7 +8,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'build'),
   },
 
   module: {
@@ -18,13 +18,9 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: [
-            'react', 
-            'stage-0',
-            ['env', { targets: { browsers: ['last 2 versions']}}]
-          ]
-        }
-      }
-    ]
-  }
+          presets: ['react', 'stage-0', ['env', { targets: { browsers: ['last 2 versions'] } }]],
+        },
+      },
+    ],
+  },
 }
